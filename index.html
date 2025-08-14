@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lisaps • GitHub‑style Profile</title>
+  <meta name="description" content="Profil bergaya GitHub untuk lisaps (Lisa Prisilia) dengan daftar proyek website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { ink: '#0f172a' }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    /* Custom tiny enhancements */
+    .glass { backdrop-filter: blur(6px); background: rgba(255,255,255,.7); }
+    .dark .glass { background: rgba(15,23,42,.6); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans">
+  <!-- Page wrapper -->
+  <div class="min-h-screen">
+    <!-- NAV -->
+    <header class="sticky top-0 z-40 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-slate-900/70 glass">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 grid place-items-center text-white font-bold shadow-md">LP</div>
+          <span class="text-sm md:text-base font-semibold tracking-tight">lisaps</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-3">
+          <a href="#projects" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Projects</a>
+          <a href="#about" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">About</a>
+          <a href="#contact" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="px-3 py-1.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle theme">🌗</button>
+          <a href="https://github.com/lisaps" target="_blank" class="px-3 py-1.5 rounded-xl text-sm bg-ink text-white hover:opacity-90">GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative">
+      <div class="max-w-6xl mx-auto px-4 py-10 md:py-14 grid md:grid-cols-[auto,1fr] gap-6 items-center">
+        <div class="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-tr from-fuchsia-500 to-cyan-500 p-1 shadow-lg">
+          <div class="w-full h-full rounded-full bg-white dark:bg-slate-900 grid place-items-center text-3xl md:text-4xl font-extrabold text-ink dark:text-white">LP</div>
+        </div>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">Lisa Prisilia <span class="opacity-70">(lisaps)</span></h1>
+          <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-2xl">Developer yang suka mengubah ide menjadi pengalaman digital yang cepat, rapi, dan menyenangkan. Fokus pada web development, creative coding, dan otomasi workflow.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">HTML</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">CSS</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">JavaScript</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">PHP</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-sm">Automation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS like GitHub cards -->
+    <section class="max-w-6xl mx-auto px-4 grid sm:grid-cols-3 gap-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm bg-white/70 dark:bg-slate-900/50">
+        <div class="text-sm opacity-70">Repos</div>
+        <div class="text-3xl font-bold">24</div>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm bg-white/70 dark:bg-slate-900/50">
+        <div class="text-sm opacity-70">Stars (★)</div>
+        <div class="text-3xl font-bold">136</div>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm bg-white/70 dark:bg-slate-900/50">
+        <div class="text-sm opacity-70">Followers</div>
+        <div class="text-3xl font-bold">58</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 pt-10 pb-16">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div>
+          <h2 class="text-xl md:text-2xl font-extrabold">Projects</h2>
+          <p class="text-slate-500 dark:text-slate-400">Beberapa website yang sudah dikerjakan.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <input id="search" type="search" placeholder="Cari judul/stack…" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm w-60">
+          <select id="stackFilter" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
+            <option value="">Semua Stack</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>PHP</option>
+            <option>Tailwind</option>
+          </select>
+          <select id="yearFilter" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
+            <option value="">Semua Tahun</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-4 pb-16">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white/70 dark:bg-slate-900/50">
+        <h3 class="text-lg font-bold mb-2">Tentang Saya</h3>
+        <p class="text-slate-600 dark:text-slate-300">Saya menikmati merancang UI yang bersih dan performa yang kencang. Terbuka untuk kolaborasi open‑source, freelance project, ataupun pekerjaan full‑time remote.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 pb-20">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white/70 dark:bg-slate-900/50 grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-bold mb-2">Kontak</h3>
+          <ul class="space-y-2 text-sm">
+            <li>🌐 <a class="underline hover:no-underline" href="#" target="_blank">Portfolio</a></li>
+            <li>🐙 <a class="underline hover:no-underline" href="https://github.com/lisaps" target="_blank">github.com/lisaps</a></li>
+            <li>✉️ <a class="underline hover:no-underline" href="mailto:hello@lisaps.dev">hello@lisaps.dev</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Ketersediaan</h3>
+          <p class="text-slate-600 dark:text-slate-300">Tersedia untuk proyek web kecil hingga menengah. Kirim brief singkat, timeline, dan budget agar saya bisa memberi estimasi terbaik. ✨</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-slate-500">© <span id="yearNow"></span> lisaps • Dibuat dengan ♥ dan Tailwind</footer>
+  </div>
+
+  <script>
+    // --- THEME TOGGLE (persist in localStorage like GitHub) ---
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const LS_KEY = 'lisaps-theme';
+    const setTheme = (mode) => { mode === 'dark' ? root.classList.add('dark') : root.classList.remove('dark'); localStorage.setItem(LS_KEY, mode); };
+    (function initTheme(){ const saved = localStorage.getItem(LS_KEY); const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; setTheme(saved || (prefersDark ? 'dark' : 'light')); })();
+    themeToggle.addEventListener('click', () => { const isDark = root.classList.contains('dark'); setTheme(isDark ? 'light' : 'dark'); });
+
+    // --- PROJECT DATA ---
+    const projects = [
+      {
+        title: 'Random Number Playground',
+        desc: 'Generator angka acak yang reset harian, dengan tampilan HTML interaktif.',
+        stack: ['HTML','CSS','JavaScript'],
+        year: 2024,
+        url: 'https://example.com/random-number',
+        stars: 23,
+        forks: 4
+      },
+      {
+        title: 'Landing Page Store',
+        desc: 'Landing page SEO untuk Brand TH8, ringan dan responsif.',
+        stack: ['HTML','Tailwind','JavaScript'],
+        year: 2024,
+        url: 'https://th8.online',
+        stars: 11,
+        forks: 2
+      },
+      {
+        title: 'Blog Roll Showcase',
+        desc: 'Halaman blog‑roll dengan banner dan grid kartu yang elegan.',
+        stack: ['HTML','CSS','JavaScript'],
+        year: 2023,
+        url: 'https://th8.ink',
+        stars: 8,
+        forks: 1
+      },
+      {
+        title: 'Readme Profile Builder',
+        desc: 'CLI kecil untuk membuat README profil GitHub otomatis dengan badge.',
+        stack: ['JavaScript'],
+        year: 2025,
+        url: 'https://example.com/readme-builder',
+        stars: 41,
+        forks: 6
+      },
+      {
+        title: 'Form Otomasi Email',
+        desc: 'Form kontak yang memicu email otomatis & validasi sisi-klien.',
+        stack: ['PHP','HTML','CSS'],
+        year: 2023,
+        url: 'https://example.com/auto-email',
+        stars: 14,
+        forks: 3
+      },
+      {
+        title: 'Mini CMS Static',
+        desc: 'CMS ringan untuk konten statis tanpa database.',
+        stack: ['PHP','Tailwind'],
+        year: 2025,
+        url: 'https://example.com/mini-cms',
+        stars: 39,
+        forks: 5
+      }
+    ];
+
+    // --- RENDER PROJECT CARDS ---
+    const grid = document.getElementById('projectGrid');
+    const search = document.getElementById('search');
+    const stackFilter = document.getElementById('stackFilter');
+    const yearFilter = document.getElementById('yearFilter');
+
+    function badge(label){
+      return `<span class="px-2 py-0.5 rounded-full text-[11px] bg-slate-100 dark:bg-slate-800">${label}</span>`
+    }
+
+    function cardTemplate(p){
+      const tags = p.stack.map(s=>badge(s)).join(' ');
+      return `
+      <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-5 bg-white/70 dark:bg-slate-900/50 hover:shadow-md transition">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-base font-semibold leading-tight">${p.title}</h3>
+          <span class="text-xs opacity-60">${p.year}</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${p.desc}</p>
+        <div class="mt-3 flex flex-wrap gap-1">${tags}</div>
+        <div class="mt-4 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-3 opacity-70">
+            <span>★ ${p.stars}</span>
+            <span>⑂ ${p.forks}</span>
+          </div>
+          <a class="underline hover:no-underline group-hover:translate-x-0.5 transition inline-flex items-center" href="${p.url}" target="_blank" rel="noopener noreferrer">Kunjungi ↗</a>
+        </div>
+      </article>`
+    }
+
+    function render(){
+      const q = search.value.trim().toLowerCase();
+      const s = stackFilter.value;
+      const y = yearFilter.value;
+      const filtered = projects.filter(p => {
+        const bySearch = !q || (p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.stack.join(' ').toLowerCase().includes(q));
+        const byStack = !s || p.stack.includes(s);
+        const byYear  = !y || String(p.year) === String(y);
+        return bySearch && byStack && byYear;
+      });
+      grid.innerHTML = filtered.map(cardTemplate).join('');
+    }
+
+    [search, stackFilter, yearFilter].forEach(el => el.addEventListener('input', render));
+    render();
+
+    // Footer year
+    document.getElementById('yearNow').textContent = new Date().getFullYear();
+  </script>
+
+  <!--
+    📌 Cara pakai:
+    1) Ganti data di konstanta `projects` dengan proyek milikmu (judul, deskripsi, stack, tahun, url).
+    2) Ubah teks bio, email, dan tautan portfolio di bagian Contact.
+    3) Deploy ke GitHub Pages / Netlify.
+  -->
+</body>
+</html>
